@@ -98,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $success = true;
                 $showForm = false;
             }
+            
         } catch (PDOException $e) {
             $errors[] = 'Database error: ' . $e->getMessage();
         }
@@ -122,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <div class="text-center text-green-700 font-semibold mb-4">
         Registration successful! You can now login.
       </div>
+
     <?php endif; ?>
 
     <?php if (!empty($errors)): ?>
